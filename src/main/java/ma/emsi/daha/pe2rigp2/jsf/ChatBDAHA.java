@@ -23,6 +23,8 @@ public class ChatBDAHA implements Serializable {
     private StringBuilder conversation = new StringBuilder();
     private boolean debug;
 
+    //final
+
     @Inject
     private FacesContext facesContext;
     @Inject
