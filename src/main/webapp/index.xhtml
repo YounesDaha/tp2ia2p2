@@ -14,12 +14,12 @@
       <h:messages errorStyle="color: red" showDetail="true" showSummary="false"/>
       <h:form id="form">
          <p:outputLabel for="systemrole" value="Rôle de l'API : "/>
-         <p:selectOneMenu id="systemrole" value="#{ChatBDAHA.systemRole}" editable="true"
-                          disabled="#{! ChatBDAHA.systemRoleChangeable}">
-            <f:selectItems value="#{ChatBDAHA.systemRoles}"/>
+         <p:selectOneMenu id="systemrole" value="#{chatBDAHA.systemRole}" editable="true"
+                          disabled="#{! chatBDAHA.systemRoleChangeable}">
+            <f:selectItems value="#{chatBDAHA.systemRoles}"/>
          </p:selectOneMenu>
          <h:outputText value="  "/>
-         <h:commandButton value="Nouveau chat" action="#{ChatBDAHA.nouveauChat}" />
+         <h:commandButton value="Nouveau chat" action="#{chatBDAHA.nouveauChat}" />
          <h:panelGrid id="paneltotal" columns="2" columnClasses="topAligned,topAligned">
             <h:panelGrid id="panelgauche" columns="1">
                <h:panelGrid id="questionetreponse" columns="1">
@@ -28,14 +28,14 @@
                      <button onclick="copyToClipboard('question')">Copier question</button>
                      <button onclick="toutEffacer()">Effacer question et réponse</button>
                   </h:panelGroup>
-                  <h:inputTextarea id="question" value="#{ChatBDAHA.question}" title="Question"
+                  <h:inputTextarea id="question" value="#{chatBDAHA.question}" title="Question"
                                    cols="50" rows="5"/>
-                  <h:commandButton value="Envoyer la question" action="#{ChatBDAHA.envoyer}"/>
+                  <h:commandButton value="Envoyer la question" action="#{chatBDAHA.envoyer}"/>
                   <h:panelGroup>
                      <h:outputText value="Réponse :"/>
                      <button onclick="copyToClipboard('reponse')">Copier réponse</button>
                   </h:panelGroup>
-                  <h:inputTextarea id="reponse" value="#{ChatBDAHA.reponse}" title="Réponse"
+                  <h:inputTextarea id="reponse" value="#{chatBDAHA.reponse}" title="Réponse"
                                    cols="50" rows="15"/>
                </h:panelGrid>
 
@@ -46,7 +46,7 @@
                   <button onclick="copyToClipboard('conversation')">Copier conversation</button>
                </h:panelGroup>
                <h:inputTextarea id="conversation" rows="30" cols="50" readonly="true"
-                                value="#{ChatBDAHA.conversation}" title="Conversation entière"/>
+                                value="#{chatBDAHA.conversation}" title="Conversation entière"/>
             </h:panelGrid>
          </h:panelGrid>
       </h:form>
